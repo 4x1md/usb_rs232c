@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name usb_rs232_footprints)(type KiCad)(uri ${KIPRJMOD}/usb_rs232c.pretty)(options "")(descr "Project specific components."))
+)

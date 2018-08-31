@@ -1,0 +1,713 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:custom_kicad_symbols
+LIBS:usb_rs232c_rev_a-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "USB to RS-232 with CH340G and MAX232"
+Date "2018-03-03"
+Rev "A"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CH340G U1
+U 1 1 5A99B64A
+P 4500 3100
+F 0 "U1" H 4500 2200 60  0000 C CNN
+F 1 "CH340G" H 4500 2100 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 4500 3100 60  0001 C CNN
+F 3 "" H 4500 3100 60  0000 C CNN
+	1    4500 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MAX232 U2
+U 1 1 5A99B6BF
+P 7900 2900
+F 0 "U2" H 7600 1800 60  0000 R CNN
+F 1 "MAX232" H 7700 1700 60  0000 R CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 7950 1850 50  0001 L CNN
+F 3 "" H 7900 3000 50  0001 C CNN
+	1    7900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB_A J1
+U 1 1 5A9A5B82
+P 2200 3200
+F 0 "J1" H 2000 3650 50  0000 L CNN
+F 1 "USB_A" H 2000 3550 50  0000 L CNN
+F 2 "usb_rs232_footprints:USB_A_Male_THT" H 2350 3150 50  0001 C CNN
+F 3 "" H 2350 3150 50  0001 C CNN
+	1    2200 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Fuse F1
+U 1 1 5A9A5C32
+P 2600 2150
+F 0 "F1" V 2680 2150 50  0000 C CNN
+F 1 "0.1A" V 2525 2150 50  0000 C CNN
+F 2 "usb_rs232_footprints:Fuse_0603" V 2530 2150 50  0001 C CNN
+F 3 "" H 2600 2150 50  0001 C CNN
+	1    2600 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x05 J2
+U 1 1 5A9A5E9C
+P 9500 3500
+F 0 "J2" H 9500 3800 50  0000 C CNN
+F 1 "RS-232" H 9500 3200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 9500 3500 50  0001 C CNN
+F 3 "" H 9500 3500 50  0001 C CNN
+	1    9500 3500
+	1    0    0    -1  
+$EndComp
+Text Notes 9600 3725 0    60   ~ 0
+TX\nRX\nRTS\nCTS\nGND
+$Comp
+L C C1
+U 1 1 5A9A6A20
+P 2200 1550
+F 0 "C1" H 2400 1650 50  0000 L CNN
+F 1 "10uF" H 2350 1550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2238 1400 50  0001 C CNN
+F 3 "" H 2200 1550 50  0001 C CNN
+	1    2200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR01
+U 1 1 5A9A6A9A
+P 2200 1900
+F 0 "#PWR01" H 2200 1650 50  0001 C CNN
+F 1 "GNDREF" H 2200 1750 50  0000 C CNN
+F 2 "" H 2200 1900 50  0001 C CNN
+F 3 "" H 2200 1900 50  0001 C CNN
+	1    2200 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Crystal Y1
+U 1 1 5A9A9072
+P 3350 3800
+F 0 "Y1" H 3350 3950 50  0000 C CNN
+F 1 "12MHz" H 3350 3650 50  0000 C CNN
+F 2 "Crystals:Crystal_SMD_5032-2pin_5.0x3.2mm" H 3350 3800 50  0001 C CNN
+F 3 "" H 3350 3800 50  0001 C CNN
+	1    3350 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C4
+U 1 1 5A9A93B5
+P 3700 4150
+F 0 "C4" H 3850 4150 50  0000 L CNN
+F 1 "22pF" H 3850 4050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3738 4000 50  0001 C CNN
+F 3 "" H 3700 4150 50  0001 C CNN
+	1    3700 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 5A9A94B7
+P 3000 4150
+F 0 "C2" H 3100 4100 50  0000 L CNN
+F 1 "22pF" H 3100 4000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3038 4000 50  0001 C CNN
+F 3 "" H 3000 4150 50  0001 C CNN
+	1    3000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 5A9A9707
+P 3550 3000
+F 0 "C3" V 3600 3100 50  0000 L CNN
+F 1 "10uF" V 3500 3050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3588 2850 50  0001 C CNN
+F 3 "" H 3550 3000 50  0001 C CNN
+	1    3550 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDREF #PWR02
+U 1 1 5A9A9B38
+P 7900 4600
+F 0 "#PWR02" H 7900 4350 50  0001 C CNN
+F 1 "GNDREF" H 7900 4450 50  0000 C CNN
+F 2 "" H 7900 4600 50  0001 C CNN
+F 3 "" H 7900 4600 50  0001 C CNN
+	1    7900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5A9A9CDF
+P 5500 1550
+F 0 "R1" V 5580 1550 50  0000 C CNN
+F 1 "0" V 5500 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5430 1550 50  0001 C CNN
+F 3 "" H 5500 1550 50  0001 C CNN
+	1    5500 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C6
+U 1 1 5A9AAB7A
+P 6800 2150
+F 0 "C6" H 6950 2200 50  0000 L CNN
+F 1 "10uF" H 6900 2125 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6838 2000 50  0001 C CNN
+F 3 "" H 6800 2150 50  0001 C CNN
+	1    6800 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C9
+U 1 1 5A9AAD2D
+P 9000 2150
+F 0 "C9" H 8750 2200 50  0000 L CNN
+F 1 "10uF" H 8700 2100 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9038 2000 50  0001 C CNN
+F 3 "" H 9000 2150 50  0001 C CNN
+	1    9000 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 5A9AB943
+P 6100 2250
+F 0 "D1" V 6150 2100 50  0000 C CNN
+F 1 "TX" V 6050 2100 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 6100 2250 50  0001 C CNN
+F 3 "" H 6100 2250 50  0001 C CNN
+	1    6100 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D2
+U 1 1 5A9ABA1D
+P 6400 2250
+F 0 "D2" V 6450 2100 50  0000 C CNN
+F 1 "RX" V 6350 2100 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 6400 2250 50  0001 C CNN
+F 3 "" H 6400 2250 50  0001 C CNN
+	1    6400 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R3
+U 1 1 5A9AC34D
+P 6400 1550
+F 0 "R3" V 6480 1550 50  0000 C CNN
+F 1 "1.5K" V 6400 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6330 1550 50  0001 C CNN
+F 3 "" H 6400 1550 50  0001 C CNN
+	1    6400 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R2
+U 1 1 5A9AC4B7
+P 6100 1550
+F 0 "R2" V 6180 1550 50  0000 C CNN
+F 1 "1.5K" V 6100 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 6030 1550 50  0001 C CNN
+F 3 "" H 6100 1550 50  0001 C CNN
+	1    6100 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C10
+U 1 1 5A9AE204
+P 9300 1850
+F 0 "C10" H 9500 1900 50  0000 L CNN
+F 1 "10uF" H 9450 1800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9338 1700 50  0001 C CNN
+F 3 "" H 9300 1850 50  0001 C CNN
+	1    9300 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 5A9AE561
+P 8150 1500
+F 0 "C7" V 8000 1450 50  0000 L CNN
+F 1 "10uF" V 8300 1400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8188 1350 50  0001 C CNN
+F 3 "" H 8150 1500 50  0001 C CNN
+	1    8150 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDREF #PWR03
+U 1 1 5A9AF38C
+P 8400 1500
+F 0 "#PWR03" H 8400 1250 50  0001 C CNN
+F 1 "GNDREF" H 8400 1350 50  0000 C CNN
+F 2 "" H 8400 1500 50  0001 C CNN
+F 3 "" H 8400 1500 50  0001 C CNN
+	1    8400 1500
+	0    -1   -1   0   
+$EndComp
+Text Label 6900 3000 0    60   ~ 0
+TXD
+Text Label 6900 3400 0    60   ~ 0
+RXD
+Text Label 6900 3200 0    60   ~ 0
+RTS#
+Text Label 6900 3600 0    60   ~ 0
+CTS#
+Text Label 9100 3300 0    60   ~ 0
+TX
+Text Label 9100 3400 0    60   ~ 0
+RX
+Text Label 9100 3500 0    60   ~ 0
+RTS
+Text Label 9100 3600 0    60   ~ 0
+CTS
+$Comp
+L C C8
+U 1 1 5A9B14CD
+P 8950 2800
+F 0 "C8" V 8700 2750 50  0000 L CNN
+F 1 "10uF" V 8800 2700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8988 2650 50  0001 C CNN
+F 3 "" H 8950 2800 50  0001 C CNN
+	1    8950 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDREF #PWR04
+U 1 1 5A9B1969
+P 9200 2800
+F 0 "#PWR04" H 9200 2550 50  0001 C CNN
+F 1 "GNDREF" H 9200 2650 50  0000 C CNN
+F 2 "" H 9200 2800 50  0001 C CNN
+F 3 "" H 9200 2800 50  0001 C CNN
+	1    9200 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2600 2300 2600 3000
+Wire Wire Line
+	2600 3000 2500 3000
+Wire Wire Line
+	3900 3200 2500 3200
+Wire Wire Line
+	3600 3400 3900 3400
+Wire Wire Line
+	3500 3800 3900 3800
+Wire Wire Line
+	3700 4000 3700 3800
+Connection ~ 3700 3800
+Wire Wire Line
+	3000 3600 3000 4000
+Wire Wire Line
+	3000 3800 3200 3800
+Wire Wire Line
+	3900 3600 3000 3600
+Connection ~ 3000 3800
+Wire Wire Line
+	2200 1700 2200 1900
+Wire Wire Line
+	2100 3600 2100 3800
+Wire Wire Line
+	3700 3000 3900 3000
+Wire Wire Line
+	5300 2400 5100 2400
+Wire Wire Line
+	3900 2400 3700 2400
+Wire Wire Line
+	5100 2600 5500 2600
+Wire Wire Line
+	5500 2600 5500 1700
+Wire Wire Line
+	2100 3800 2200 3800
+Connection ~ 2200 3800
+Wire Wire Line
+	7900 4100 7900 4600
+Wire Wire Line
+	3400 2600 3900 2600
+Wire Wire Line
+	3400 1800 3400 2600
+Wire Wire Line
+	3400 2100 5700 2100
+Wire Wire Line
+	5700 2100 5700 3000
+Wire Wire Line
+	5700 3000 7100 3000
+Wire Wire Line
+	5900 3400 7100 3400
+Wire Wire Line
+	5900 1900 5900 3400
+Wire Wire Line
+	3200 1900 5900 1900
+Wire Wire Line
+	3200 1800 3200 2800
+Wire Wire Line
+	3200 2800 3900 2800
+Wire Wire Line
+	5300 3600 7100 3600
+Wire Wire Line
+	5300 3600 5300 3800
+Wire Wire Line
+	5300 3800 5100 3800
+Wire Wire Line
+	5100 2800 5300 2800
+Wire Wire Line
+	5300 2800 5300 3200
+Wire Wire Line
+	5300 3200 7100 3200
+Wire Wire Line
+	6800 2000 6800 1900
+Wire Wire Line
+	6800 1900 7000 1900
+Wire Wire Line
+	7000 1900 7000 2000
+Wire Wire Line
+	7000 2000 7100 2000
+Wire Wire Line
+	6800 2300 6800 2400
+Wire Wire Line
+	6800 2400 7000 2400
+Wire Wire Line
+	7000 2400 7000 2300
+Wire Wire Line
+	7000 2300 7100 2300
+Wire Wire Line
+	8700 2000 8800 2000
+Wire Wire Line
+	8800 2000 8800 1900
+Wire Wire Line
+	8800 1900 9000 1900
+Wire Wire Line
+	9000 1900 9000 2000
+Wire Wire Line
+	8700 2300 8800 2300
+Wire Wire Line
+	8800 2300 8800 2400
+Wire Wire Line
+	8800 2400 9000 2400
+Wire Wire Line
+	9000 2400 9000 2300
+Connection ~ 6100 3000
+Connection ~ 6400 3400
+Wire Wire Line
+	5500 1200 5500 1400
+Wire Wire Line
+	2200 1200 9300 1200
+Wire Wire Line
+	2600 1100 2600 2000
+Wire Wire Line
+	5300 1200 5300 2400
+Connection ~ 5300 1200
+Connection ~ 5500 1200
+Wire Wire Line
+	6100 1400 6100 1200
+Connection ~ 6100 1200
+Wire Wire Line
+	6400 1200 6400 1400
+Connection ~ 6400 1200
+Wire Wire Line
+	6100 2100 6100 1700
+Wire Wire Line
+	6100 2400 6100 3000
+Wire Wire Line
+	6400 1700 6400 2100
+Wire Wire Line
+	6400 2400 6400 3400
+Wire Wire Line
+	7900 1200 7900 1700
+Wire Wire Line
+	2200 1400 2200 1200
+Connection ~ 2600 1200
+Wire Wire Line
+	8700 2500 9300 2500
+Wire Wire Line
+	9300 2500 9300 2000
+Wire Wire Line
+	9300 1200 9300 1700
+Connection ~ 7900 1200
+Connection ~ 7900 4500
+Wire Wire Line
+	8400 1500 8300 1500
+Wire Wire Line
+	8000 1500 7900 1500
+Connection ~ 7900 1500
+Wire Wire Line
+	8700 2800 8800 2800
+Wire Wire Line
+	9100 2800 9200 2800
+Wire Wire Line
+	6700 3700 6700 3600
+Connection ~ 6700 3600
+Wire Wire Line
+	6700 2900 6700 3200
+Connection ~ 6700 3200
+Connection ~ 3200 1900
+Connection ~ 3400 2100
+$Comp
+L C C5
+U 1 1 5A9B62CC
+P 4950 1500
+F 0 "C5" V 4800 1450 50  0000 L CNN
+F 1 "10uF" V 5100 1400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4988 1350 50  0001 C CNN
+F 3 "" H 4950 1500 50  0001 C CNN
+	1    4950 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDREF #PWR05
+U 1 1 5A9B62D2
+P 4700 1500
+F 0 "#PWR05" H 4700 1250 50  0001 C CNN
+F 1 "GNDREF" H 4700 1350 50  0000 C CNN
+F 2 "" H 4700 1500 50  0001 C CNN
+F 3 "" H 4700 1500 50  0001 C CNN
+	1    4700 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5100 1500 5300 1500
+Connection ~ 5300 1500
+Wire Wire Line
+	4700 1500 4800 1500
+Text Label 3700 3000 0    50   ~ 0
+3.3V
+Text Label 3700 1200 0    60   ~ 0
+5V
+Text Label 2600 3200 0    60   ~ 0
+USB_D+
+Text Label 2600 3300 0    60   ~ 0
+USB_D-
+Text Label 2600 2800 1    60   ~ 0
+USB_5V
+Wire Wire Line
+	3600 3300 3600 3400
+Wire Wire Line
+	2500 3300 3600 3300
+$Comp
+L GNDREF #PWR06
+U 1 1 5A9B86B2
+P 3200 3000
+F 0 "#PWR06" H 3200 2750 50  0001 C CNN
+F 1 "GNDREF" H 3200 2850 50  0000 C CNN
+F 2 "" H 3200 3000 50  0001 C CNN
+F 3 "" H 3200 3000 50  0001 C CNN
+	1    3200 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 3000 3400 3000
+$Comp
+L GNDREF #PWR07
+U 1 1 5A9B8B4C
+P 3700 2400
+F 0 "#PWR07" H 3700 2150 50  0001 C CNN
+F 1 "GNDREF" H 3700 2250 50  0000 C CNN
+F 2 "" H 3700 2400 50  0001 C CNN
+F 3 "" H 3700 2400 50  0001 C CNN
+	1    3700 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L TEST TP1
+U 1 1 5A9C0499
+P 2600 1100
+F 0 "TP1" H 2600 1400 50  0000 C BNN
+F 1 "5V" H 2600 1350 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2600 1100 50  0001 C CNN
+F 3 "" H 2600 1100 50  0001 C CNN
+	1    2600 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP2
+U 1 1 5A9C0A7D
+P 2600 4400
+F 0 "TP2" H 2600 4700 50  0000 C BNN
+F 1 "GND" H 2600 4650 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2600 4400 50  0001 C CNN
+F 3 "" H 2600 4400 50  0001 C CNN
+	1    2600 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP3
+U 1 1 5A9C0E83
+P 3200 1800
+F 0 "TP3" H 3200 2100 50  0000 C BNN
+F 1 "RX" H 3200 2050 50  0000 C CNN
+F 2 "usb_rs232_footprints:Measurement_Point_Square-SMD_1.0mmx1.0mm" H 3200 1800 50  0001 C CNN
+F 3 "" H 3200 1800 50  0001 C CNN
+	1    3200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP4
+U 1 1 5A9C0F8D
+P 3400 1800
+F 0 "TP4" H 3400 2100 50  0000 C BNN
+F 1 "TX" H 3400 2050 50  0000 C CNN
+F 2 "usb_rs232_footprints:Measurement_Point_Square-SMD_1.0mmx1.0mm" H 3400 1800 50  0001 C CNN
+F 3 "" H 3400 1800 50  0001 C CNN
+	1    3400 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP5
+U 1 1 5A9C0F93
+P 6700 2900
+F 0 "TP5" H 6700 3200 50  0000 C BNN
+F 1 "RTS" H 6700 3150 50  0000 C CNN
+F 2 "usb_rs232_footprints:Measurement_Point_Square-SMD_1.0mmx1.0mm" H 6700 2900 50  0001 C CNN
+F 3 "" H 6700 2900 50  0001 C CNN
+	1    6700 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP6
+U 1 1 5A9C10D5
+P 6700 3700
+F 0 "TP6" H 6700 3925 50  0000 C BNN
+F 1 "CTS" H 6700 4025 50  0000 C CNN
+F 2 "usb_rs232_footprints:Measurement_Point_Square-SMD_1.0mmx1.0mm" H 6700 3700 50  0001 C CNN
+F 3 "" H 6700 3700 50  0001 C CNN
+	1    6700 3700
+	-1   0    0    1   
+$EndComp
+Text Label 3700 3600 0    60   ~ 0
+XI
+Text Label 3700 3800 0    60   ~ 0
+XO
+NoConn ~ 5100 3000
+NoConn ~ 5100 3200
+NoConn ~ 5100 3400
+NoConn ~ 5100 3600
+Text Label 5100 2600 0    50   ~ 0
+RS232_INV
+Text Label 8700 2800 0    60   ~ 0
+VS-
+Text Label 8800 1900 0    60   ~ 0
+C2+
+Text Label 8800 2400 0    60   ~ 0
+C2-
+Text Label 7000 2000 0    50   ~ 0
+C1+
+Text Label 7000 2300 0    50   ~ 0
+C1-
+Text Label 6400 1800 3    50   ~ 0
+RX_LED
+Text Label 6100 1800 3    50   ~ 0
+TX_LED
+Text Label 8800 2500 0    60   ~ 0
+VS+
+Text Notes 5600 3900 0    60   ~ 0
+Mounting holes
+Wire Notes Line
+	5500 3800 6400 3800
+Wire Notes Line
+	6400 3800 6400 4300
+Wire Notes Line
+	6400 4300 5500 4300
+Wire Notes Line
+	5500 4300 5500 3800
+Wire Wire Line
+	3700 4500 3700 4300
+Wire Wire Line
+	2200 4500 8900 4500
+Wire Wire Line
+	3000 4500 3000 4300
+Wire Wire Line
+	2200 3600 2200 4500
+Connection ~ 3000 4500
+Wire Wire Line
+	2600 4400 2600 4500
+Connection ~ 2600 4500
+Connection ~ 3700 4500
+Wire Wire Line
+	8700 3600 9300 3600
+Wire Wire Line
+	8700 3400 9300 3400
+Wire Wire Line
+	9300 3500 8900 3500
+Wire Wire Line
+	8900 3500 8900 3200
+Wire Wire Line
+	8900 3200 8700 3200
+Wire Wire Line
+	9300 3300 9000 3300
+Wire Wire Line
+	9000 3300 9000 3000
+Wire Wire Line
+	9000 3000 8700 3000
+Wire Wire Line
+	9300 3700 8900 3700
+Wire Wire Line
+	8900 3700 8900 4500
+$Comp
+L MountingHole MH1
+U 1 1 5B89BF1C
+P 5800 4100
+F 0 "MH1" H 5800 4200 50  0000 C CNN
+F 1 "1.3mm" H 5800 4000 50  0000 C CNN
+F 2 "usb_rs232_footprints:MountingHole_1.3mm" H 5800 4100 50  0001 C CNN
+F 3 "" H 5800 4100 50  0001 C CNN
+	1    5800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MountingHole MH2
+U 1 1 5B89BFB5
+P 6100 4100
+F 0 "MH2" H 6100 4200 50  0000 C CNN
+F 1 "1.3mm" H 6100 4000 50  0000 C CNN
+F 2 "usb_rs232_footprints:MountingHole_1.3mm" H 6100 4100 50  0001 C CNN
+F 3 "" H 6100 4100 50  0001 C CNN
+	1    6100 4100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

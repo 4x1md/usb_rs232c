@@ -2,7 +2,7 @@
 *.kicad_pcb linguist-detectable=true
 *.sch linguist-detectable=true
 # Gerbers
-#pcb/phone_rtty_rev_a/gerbers/* linguist-detectable=true
-#pcb/phone_rtty_rev_b/gerbers/* linguist-detectable=true
+#pcb/usb_rs232c_rev_a/gerbers/* linguist-detectable=true
+#pcb/usb_rs232c_rev_a/gerbers/* linguist-detectable=true
 # LTspice
 #ltspice/* linguist-detectable=true

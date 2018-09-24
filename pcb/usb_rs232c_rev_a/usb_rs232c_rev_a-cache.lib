@@ -212,6 +212,10 @@ F0 "MH" 0 100 50 H V C CNN
 F1 "MountingHole" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*
+ MH*
+$ENDFPLIST
 DRAW
 S -50 50 50 -50 1 1 10 f
 ENDDRAW

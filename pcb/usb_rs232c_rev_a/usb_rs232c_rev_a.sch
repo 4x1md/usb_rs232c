@@ -559,7 +559,7 @@ U 1 1 5A9C0499
 P 2600 1100
 F 0 "TP1" H 2600 1400 50  0000 C BNN
 F 1 "5V" H 2600 1350 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2600 1100 50  0001 C CNN
+F 2 "usb_rs232_footprints:Measurement_Point_Square-SMD_1.0mmx1.0mm" H 2600 1100 50  0001 C CNN
 F 3 "" H 2600 1100 50  0001 C CNN
 	1    2600 1100
 	1    0    0    -1  
@@ -570,7 +570,7 @@ U 1 1 5A9C0A7D
 P 2600 4400
 F 0 "TP2" H 2600 4700 50  0000 C BNN
 F 1 "GND" H 2600 4650 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2600 4400 50  0001 C CNN
+F 2 "usb_rs232_footprints:Measurement_Point_Square-SMD_1.0mmx1.0mm" H 2600 4400 50  0001 C CNN
 F 3 "" H 2600 4400 50  0001 C CNN
 	1    2600 4400
 	1    0    0    -1  
@@ -693,8 +693,8 @@ L MountingHole MH1
 U 1 1 5B89BF1C
 P 5800 4100
 F 0 "MH1" H 5800 4200 50  0000 C CNN
-F 1 "1.3mm" H 5800 4000 50  0000 C CNN
-F 2 "usb_rs232_footprints:MountingHole_1.3mm" H 5800 4100 50  0001 C CNN
+F 1 "1.4mm" H 5800 4000 50  0000 C CNN
+F 2 "usb_rs232_footprints:MountingHole_1.4mm" H 5800 4100 50  0001 C CNN
 F 3 "" H 5800 4100 50  0001 C CNN
 	1    5800 4100
 	1    0    0    -1  
@@ -704,8 +704,8 @@ L MountingHole MH2
 U 1 1 5B89BFB5
 P 6100 4100
 F 0 "MH2" H 6100 4200 50  0000 C CNN
-F 1 "1.3mm" H 6100 4000 50  0000 C CNN
-F 2 "usb_rs232_footprints:MountingHole_1.3mm" H 6100 4100 50  0001 C CNN
+F 1 "1.4mm" H 6100 4000 50  0000 C CNN
+F 2 "usb_rs232_footprints:MountingHole_1.4mm" H 6100 4100 50  0001 C CNN
 F 3 "" H 6100 4100 50  0001 C CNN
 	1    6100 4100
 	1    0    0    -1  

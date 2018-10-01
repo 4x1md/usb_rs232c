@@ -1,9 +1,13 @@
-# usb_rs232c
-USB to RS-232C adapter
+# USB to RS-232C adapter
+USB to RS-232C adapter based on CH340G and MAX232 ICs. The adapter 
+
+## Schematic
+
+![Schematic](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/schematic.png)
 
 ## PCB
 
-
+![3D model](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/pcb_3d.png)
 
 ## Links
 

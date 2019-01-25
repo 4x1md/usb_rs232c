@@ -61,4 +61,5 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
-LibName33=/mnt/second/MyProjects/kicad_libraries/custom_kicad_symbols/custom_kicad_symbols
+LibName33=D:/Projects/kicad_libraries/symbols/custom_symbols
+LibName34=/mnt/second/Projects/kicad_libraries/symbols/custom_symbols

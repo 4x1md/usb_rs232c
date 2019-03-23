@@ -19,11 +19,11 @@ The device has two assembly options: USB to RS-232 adapter and USB to UART adapt
 
 ### USB to RS-232 Adapter
 
-![Photo UART](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_uart.jpg)
+![Photo RS-232](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_rs232.png)
 
 ### USB to UART Adapter
 
-![Photo RS-232](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_rs232.jpg)
+![Photo UART](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_uart.png)
 
 ## PCB
 
@@ -31,13 +31,13 @@ The device has two assembly options: USB to RS-232 adapter and USB to UART adapt
 
 ## Photos
 
-### UART Assembly
-
-![Photo UART](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_uart.jpg)
-
 ### RS-232 Assembly
 
 ![Photo RS-232](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_rs232.jpg)
+
+### UART Assembly
+
+![Photo UART](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_uart.jpg)
 
 ## Links
 

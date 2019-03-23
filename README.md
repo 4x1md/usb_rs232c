@@ -1,13 +1,43 @@
 # USB to RS-232C adapter
-USB to RS-232C adapter based on CH340G and MAX232 ICs. The adapter 
+USB to RS-232C adapter based on CH340G and MAX232 ICs.
+
+## Overview
+
+The adapter was designed for communcating with arbitrary waveform generators which have RS-232 interface.
+
+It uses CH340G IC as a USB-to-UART adapter and MAX232 for converting 5V UART logic levels to RS-232.
+
+The device can also be used as USB-to-UART adapter if MAX232 IC is not assembled. 
 
 ## Schematic
 
 ![Schematic](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/schematic.png)
 
+## BOM Variants
+
+The device has two assembly options: USB to RS-232 adapter and USB to UART adapter.
+
+### USB to RS-232 Adapter
+
+![Photo UART](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_uart.jpg)
+
+### USB to UART Adapter
+
+![Photo RS-232](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_rs232.jpg)
+
 ## PCB
 
 ![3D model](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/pcb_3d.png)
+
+## Photos
+
+### UART Assembly
+
+![Photo UART](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_uart.jpg)
+
+### RS-232 Assembly
+
+![Photo RS-232](https://raw.githubusercontent.com/4x1md/usb_rs232c/master/images/assembly_rs232.jpg)
 
 ## Links
 
